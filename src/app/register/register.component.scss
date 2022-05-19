@@ -1,0 +1,32 @@
+
+/*  left side CSS */
+.left-side{
+    .text-left{
+        float: left;
+    }
+}
+
+
+
+
+/* right side CSS  */
+input{
+    border: none;
+    border-bottom: 1px solid;
+    width: 150%;
+    margin-bottom: 10%;
+}
+input:focus {
+    color: #19B5FE;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+
+}
+button{
+    width: 51%;
+    height: 25%;
+    color: white;
+    background-color: #C71585;
+    border: none;
+}
