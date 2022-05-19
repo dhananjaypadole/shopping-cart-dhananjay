@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+$carousel-butoon-color: #01000036;
+
+@mixin carousel-btn-style{
+    background: $carousel-butoon-color;
+    padding: 10px 15px !important;
+    position: relative !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.carousel-control-next{
+    justify-content: end;
+    .carousel-control-next-icon{
+        display: none;
+    }
+    .visually-hidden {
+        @include carousel-btn-style
+    }
+}
+
+
+.carousel-control-prev{
+    justify-content: start;
+    .carousel-control-prev-icon{
+        display: none;
+    }
+    .visually-hidden {
+        @include carousel-btn-style
+    }
+}
+
