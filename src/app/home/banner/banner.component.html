@@ -1,7 +1,7 @@
 <section>
-    <div class="container">
+    <div class="container mt-5">
 
-        <ngb-carousel #carousel [interval]="1000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
+        <ngb-carousel #carousel [interval]="20000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let bannerItem of bannerList; index as i">
               <ng-container *ngIf="bannerItem.isActive"> 
               <!-- <div class="carousel-caption">

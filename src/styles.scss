@@ -4,33 +4,47 @@
 @import '~bootstrap/scss/bootstrap';
 
 $carousel-butoon-color: #01000036;
+$carousel-dot-color: #807676 !important;
+$carousel-butoon-padding: 10px 15px !important;
+$display-none:none;
+$position-relative:relative !important;
+$auto:auto !important;
+$fifty-peresent :50% !important;
+$ten-pixer:10px !important;
+$fifteen-persent :15px !important;
 
 @mixin carousel-btn-style{
     background: $carousel-butoon-color;
-    padding: 10px 15px !important;
-    position: relative !important;
-    width: auto !important;
-    height: auto !important;
+    padding: $carousel-butoon-padding;
+    position: $position-relative;
+    width: $auto;
+    height: $auto;
 }
 
 .carousel-control-next{
     justify-content: end;
     .carousel-control-next-icon{
-        display: none;
+       display: $display-none
     }
     .visually-hidden {
         @include carousel-btn-style
     }
 }
-
 
 .carousel-control-prev{
     justify-content: start;
     .carousel-control-prev-icon{
-        display: none;
+       display: $display-none
     }
     .visually-hidden {
         @include carousel-btn-style
     }
 }
 
+.carousel-indicators button {
+    border-radius: $fifty-peresent;
+    width: $ten-pixer;
+    height: $ten-pixer;
+    background-color: $carousel-dot-color;
+    margin-left: $fifteen-persent;
+}
