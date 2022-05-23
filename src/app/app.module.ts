@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RegisterComponent } from './register/register.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { SidebarFilterComponent } from './product-listing/sidebar-filter/sidebar-filter.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SidebarFilterComponent } from './product-listing/sidebar-filter/sidebar
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
