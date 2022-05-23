@@ -48,3 +48,6 @@ $fifteen-persent :15px !important;
     background-color: $carousel-dot-color;
     margin-left: $fifteen-persent;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
