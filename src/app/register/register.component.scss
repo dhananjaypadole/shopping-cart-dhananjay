@@ -1,7 +1,6 @@
-
 /*  left side CSS */
-.left-side{
-    .text-left{
+.left-side {
+    .text-left {
         float: left;
     }
 }
@@ -10,12 +9,17 @@
 
 
 /* right side CSS  */
-input{
+label {
+    margin-top: 3%;
+}
+
+input {
     border: none;
     border-bottom: 1px solid;
-    width: 150%;
-    margin-bottom: 10%;
+    width: 80%;
+    margin-bottom: 3%;
 }
+
 input:focus {
     color: #19B5FE;
     border: none;
@@ -23,10 +27,15 @@ input:focus {
     border-bottom: 1px solid;
 
 }
-button{
+
+button {
     width: 51%;
     height: 25%;
     color: white;
     background-color: #C71585;
     border: none;
+}
+
+.errorMessage {
+    color: red;
 }
