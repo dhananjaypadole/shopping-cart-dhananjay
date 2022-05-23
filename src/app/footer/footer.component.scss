@@ -8,10 +8,15 @@
 //     text-align: center;
 //  }
 
- footer {
-    text-align: center;
-    padding: 3px;
-    background-color: #BEBEBE;
-    color: black;
-    margin-bottom: 10%;
-  }
+//  Updates - Heena
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  font-weight: 300;
+  width: 100%;
+  background-color: #eaeaea;
+  color: black;
+  font-size: 12px;
+  padding: 5px;
+}
