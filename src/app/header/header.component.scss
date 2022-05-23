@@ -11,8 +11,8 @@
     width: 90px;
     height: 50px;
     float: right;
-    .cart-logo{        
-    filter: invert(16%) sepia(71%) saturate(5224%) hue-rotate(311deg) brightness(86%) contrast(92%);
+    .cart-logo {
+        filter: invert(16%) sepia(71%) saturate(5224%) hue-rotate(311deg) brightness(86%) contrast(92%);
     }
 }
 
@@ -20,9 +20,9 @@
     white-space: nowrap;
 }
 
-.home-product{
-font-weight: 500;
-color: gray;    
+.nav .nav-item a {
+    font-weight: 500;
+    color: gray;
 }
 .login-singup-a{
   color:black;  
@@ -34,4 +34,8 @@ text-decoration:none;
     height: 90px;
     width: 100%;
     box-shadow: 1px 10px 10px #eaeaea;
+}
+.nav .nav-item .login-singup-a {
+    color: black;
+    text-decoration: none;
 }
