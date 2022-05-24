@@ -2,18 +2,14 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import '../src/assets/scss/variable.scss';
 
-$carousel-butoon-color: #01000036;
-$carousel-dot-color: #807676 !important;
-$carousel-butoon-padding: 10px 15px !important;
-$display-none:none;
-$position-relative:relative !important;
-$auto:auto !important;
-$fifty-peresent :50% !important;
-$ten-pixer:10px !important;
-$fifteen-persent :15px !important;
+@font-face {
+    font-family: 'Blogger Sans';
+    src: url('./assets/fonts/Blogger_Sans.otf');
+}
 
-@mixin carousel-btn-style{
+@mixin carousel-btn-style {
     background: $carousel-butoon-color;
     padding: $carousel-butoon-padding;
     position: $position-relative;
@@ -21,21 +17,34 @@ $fifteen-persent :15px !important;
     height: $auto;
 }
 
-.carousel-control-next{
+@mixin font($font-size: 17px, $line-height: 30px) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin c-pointer {
+    cursor: $pointer;
+}
+
+.carousel-control-next {
     justify-content: end;
-    .carousel-control-next-icon{
-       display: $display-none
+
+    .carousel-control-next-icon {
+        display: $none
     }
+
     .visually-hidden {
         @include carousel-btn-style
     }
 }
 
-.carousel-control-prev{
+.carousel-control-prev {
     justify-content: start;
-    .carousel-control-prev-icon{
-       display: $display-none
+
+    .carousel-control-prev-icon {
+        display: $none
     }
+
     .visually-hidden {
         @include carousel-btn-style
     }
@@ -49,5 +58,64 @@ $fifteen-persent :15px !important;
     margin-left: $fifteen-persent;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.products:nth-child(even) {
+    .product-area {
+        order: 1;
+    }
+}
+
+.product-title {
+    color: $black;
+}
+
+.w-600 {
+    font-weight: $font-bold;
+}
+
+.product-btn {
+    @include font($font-size: 17px, $line-height: 34px);
+    @include c-pointer;
+    background-color: $btn-color;
+    color: $white;
+    font-family: $font-bogger;
+    border: 0px;
+
+    &:hover {
+        background: $btn-hover-color;
+    }
+}
+
+.fancy-line {
+    border: 0;
+    height: $fifteen-persent;
+    position: $position-relative;
+}
+
+.fancy-line {
+    height: 1em;
+    background: $line-background;
+
+    &:before {
+        @extend .fancy-line;
+    }
+}
+
+.c-pointer {
+    @include c-pointer;
+}
+
+p {
+    font-family: $font-bogger;
+    @include font($font-size: 17px, $line-height: 26px);
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: $font-bogger;
+}
