@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { SidebarFilterComponent } from './product-listing/sidebar-filter/sidebar-filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartModule } from './cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
