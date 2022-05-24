@@ -12,10 +12,15 @@ const routes: Routes = [
     loadChildren:()=> import('./cart/cart.module').then(m => m.CartModule) 
   },
   {
-    path:'product-listing', component: ProductListingComponent,
+    path:'',
+    loadChildren:()=> import('./auth/auth.module').then(m => m.AuthModule) 
   },
   {
-    path:'',
+    path:'product-listing', component: ProductListingComponent,
+  },
+
+  {
+    path:'home',
     loadChildren:()=> import('./home/home.module').then(m => m.HomeModule) 
   }
   
