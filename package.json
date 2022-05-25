@@ -8,7 +8,7 @@
     "server": "ts-node ./server/server.ts",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "a":"http-server ./server -p 6006",
+    "a": "http-server ./server -p 6006",
     "start": "concurrently --kill-others \"json-server --watch ./server/banners/index.get.json -p 6001\"  \"json-server --watch ./server/categories/index.get.json -p 6002\" \"json-server --watch ./server/addToCart/index.post.json -p 6003\" \"json-server --watch ./server/products/index.get.json -p 6004\" \"json-server --watch ./server/db.json -p 6005\" \"ng s\""
   },
   "private": true,
@@ -38,6 +38,7 @@
     "@angular/compiler-cli": "~13.3.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "concurrently": "^7.2.1",
     "jasmine-core": "~4.0.0",
     "json-server": "^0.17.0",
     "karma": "~6.3.0",
