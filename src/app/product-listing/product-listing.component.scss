@@ -2,13 +2,7 @@
     .sidebar-filter, .main-content {
         float: left;
     } 
-    .sidebar-filter {
-        width: 250px;
-        background-color: rgb(229,229,229);
-        height: 100vh;
-    }
     .main-content {
-        width: calc(100% - 250px);
         margin-top: 20px;
     }
     .product-item {
@@ -50,6 +44,31 @@
                 padding: 3px 10px;
                 font-size: 14px;
             }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .sidebar-filter {
+        width: 100%;
+        background-color: rgb(174,19,70);
+        height: auto;
+    }
+    .product-listing {
+        .main-content {
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 600px) {
+    .sidebar-filter {
+        width: 250px;
+        background-color: rgb(229,229,229);
+        height: 100vh;
+    }
+    .product-listing {
+        .main-content {
+            width: calc(100% - 250px);
         }
     }
 }
