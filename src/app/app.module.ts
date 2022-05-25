@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductListingComponent } from './product-listing/product-listing.component';
 import { SidebarFilterComponent } from './product-listing/sidebar-filter/sidebar-filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartModule } from './cart/cart.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,13 +17,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HeaderComponent,
     FooterComponent,
     ProductListingComponent,
-    SidebarFilterComponent
+    SidebarFilterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CartModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
