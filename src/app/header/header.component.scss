@@ -30,6 +30,9 @@ text-decoration:none;
 }
 
 // Updatations - Heena
+.relative {
+    position: relative;
+}
 .height-90 {
     height: 90px;
     width: 100%;
@@ -38,6 +41,27 @@ text-decoration:none;
 .nav .nav-item .login-singup-a {
     color: black;
     text-decoration: none;
+}
+.navbar-items {
+    width: 63%;
+    
+    a {
+        color: #000 !important;
+        text-decoration: none;
+    }
+}
+.login-register {
+    position: absolute;
+    right: 0;
+    top: 10px;
+
+    .login-register-button {
+        color: #000;
+        text-decoration: none;
+        &:nth-child(2) {
+            margin-left: 10px;
+        }
+    }
 }
 .cart-button {
     width: 120px;
@@ -53,5 +77,69 @@ text-decoration:none;
     .cart-count {
         float: right;
         padding-top: 7px;
+    }
+}
+.margin-top-custom {
+    margin-top: 30px;
+}
+
+@media (min-width: 320px) {
+    .navbar.navbar-inverse {
+
+        .navbar-header {
+            
+            a img {
+                width: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .container-fluid {
+        padding: 0px;
+    }
+    .navbar-header {  
+        a img {
+            width: 100px;
+            margin-top: 10px;
+        }
+    }
+    .height-90 {
+        height: 80px;
+    }
+    .navbar-items {
+        margin-right: 40px;
+    }
+    .login-register {
+        right: 5px;
+    }
+    .cart-button-layout {
+        margin-top: 0px;
+        position: absolute;
+        right: 0;
+        bottom: -9px;
+        width: 100px;
+
+        .cart-button {
+            width: 95px;
+
+            .cart-icon {
+                width: 25px;
+            }
+        }
+    }
+}
+
+@media (min-width: 482px) {
+    .navbar.navbar-inverse {
+
+        .navbar-header {
+            
+            a img {
+                width: 150px;
+            }
+        }
+        
     }
 }

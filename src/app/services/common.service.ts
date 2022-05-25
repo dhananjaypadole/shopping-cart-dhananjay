@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class CommonService {
   assetsFolderPath = '../../../assets';
+  assetsFolderProductPath = '../../assets';
   // assetsFolderPath = 'http://localhost:6006';
 
   categoriesApi = 'http://localhost:6002/categories';

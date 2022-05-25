@@ -1,5 +1,4 @@
-<div class="container-fluid height-90">
-    <!-- Updates - Heena -->
+<!-- <div class="container-fluid height-90">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -26,18 +25,41 @@
                             </div>
                             <span class="cart-count" > 0 items</span>
                         </div>
-                        
-                        <!-- <div class="row cart-imag c-pointer"  routerLink="/cart">
-                            <div class="col-sm-6">
-                                <img class="cart-logo" src="../../../assets/img/cart.svg">
-                            </div>
-                            <div class="col-sm-6 p-0">
-                                <span class="cart-iteamcount  " > 0 item</span>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div> -->
+
+
+<!-- New changes - Heena -->
+<div class="container-fluid height-90">
+    <div class="container">
+        <nav class="navbar navbar-inverse relative">
+              <div class="navbar-header">
+                  <a routerLink="/home" class="c-pointer"> <img src="../../assets/img/logo.png"></a>
+              </div>
+              <div class="login-register">
+                <a routerLink="/login" class="login-register-button c-pointer">SignIn</a>
+                <a routerLink="/register" class="login-register-button c-pointer">Register</a>
+              </div>
+              <div class="navbar-items margin-top-custom">
+                  <span class="active"><a routerLink="/home" class="c-pointer">Home</a></span>
+                  <span><a routerLink="/product-listing" class="c-pointer" style="margin-left: 5%">Products</a></span>
+              </div>
+              <ul class="nav navbar-nav navbar-right margin-top-custom cart-button-layout">
+                <li class="cart-button">
+                    <div class="cart-icon">
+                        <img class="cart-logo" src="../../../assets/img/cart.svg">
+                    </div>
+                    <span class="cart-count" > 0 items</span>    
+                </li>
+              </ul>
+        </nav>
+    </div>
 </div>
+
+
+
+
