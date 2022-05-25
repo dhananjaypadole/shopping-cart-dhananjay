@@ -9,6 +9,7 @@ import { ProductListingComponent } from './product-listing/product-listing.compo
 import { SidebarFilterComponent } from './product-listing/sidebar-filter/sidebar-filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartModule } from './cart/cart.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { CartModule } from './cart/cart.module';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    CartModule
+    CartModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
