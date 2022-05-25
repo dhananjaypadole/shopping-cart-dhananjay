@@ -16,7 +16,7 @@ import { CartModule } from './cart/cart.module';
     HeaderComponent,
     FooterComponent,
     ProductListingComponent,
-    SidebarFilterComponent
+    SidebarFilterComponent,
   ],
   imports: [
     BrowserModule,
