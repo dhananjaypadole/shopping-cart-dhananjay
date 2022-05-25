@@ -1,5 +1,5 @@
 <section>
-    <div class="container mt-5">
+    <div class="container mt-5" *ngIf="bannerList.length > 0">
 
         <ngb-carousel #carousel [interval]="20000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus" (slide)="onSlide($event)">
             <ng-template ngbSlide *ngFor="let bannerItem of bannerList; index as i">
