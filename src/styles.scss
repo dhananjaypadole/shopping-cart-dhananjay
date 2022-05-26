@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
+
+
 @import '~bootstrap/scss/bootstrap';
 @import '../src/assets/scss/variable.scss';
 
@@ -18,8 +20,8 @@
 }
 
 @mixin font($font-size: 17px, $line-height: 30px) {
-    font-size: $font-size;
-    line-height: $line-height;
+    font-size: $font-size !important;
+    line-height: $line-height !important;
 }
 
 @mixin c-pointer {
@@ -110,6 +112,22 @@ p {
     @include font($font-size: 17px, $line-height: 26px);
 }
 
+.modal-title{
+    font-family: $font-bogger;
+    @include font($font-size: 27px, $line-height: 34px);
+    margin: 0px !important;
+}
+
+.modal-body{
+    background: #eeeeee;
+    padding: 0px !important;
+}
+
+.modal-footer{
+    padding: 0px !important;
+}
+
+
 html,
 body {
     height: 100%;
@@ -118,4 +136,13 @@ body {
 body {
     margin: 0;
     font-family: $font-bogger;
+}
+
+
+.btn-close:focus {
+    box-shadow:none !important
+}
+
+app-card-item{
+    margin-top: 2px;
 }

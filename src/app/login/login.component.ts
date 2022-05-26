@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
   get f() {
     return this.LoginForm.controls;
   }
+
   getData() {
     debugger;
     this.dataService.getData(this.commonService.userApi).subscribe((res: any) => {
@@ -68,6 +69,7 @@ export class LoginComponent implements OnInit {
       this.wrongCredintialsMessage = true
       this.LoginForm.reset();
     }
+
   }
 
 }

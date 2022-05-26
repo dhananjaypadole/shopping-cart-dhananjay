@@ -60,8 +60,7 @@ export class RegisterComponent implements OnInit {
     }
   }
   onSubmit(form: FormGroup) {
-    console.log(form.controls)
-    //  debugger
+
     console.log('Valid?', form.valid); // true or false
     this.registrationData.fname = form.value.fname;
     this.registrationData.lname = form.value.lname;
