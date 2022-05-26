@@ -32,6 +32,17 @@ button {
     background-color: #C71585;
     border: none;
 }
+.btn-disable {
+    background-color: #aa98a9;
+}
+
+.btn-enable-message {
+    display: none;
+}
+
+.btn-disable-message {
+    display: block;
+}
 
 .errorMessage {
     color: red;
