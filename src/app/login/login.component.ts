@@ -23,7 +23,6 @@ export class LoginComponent implements OnInit {
     return this.LoginForm.controls;
   }
   onSubmit(form: FormGroup) {
-    debugger
     console.log('Valid?', form.valid); // true or false
     console.log('Email', form.value.email);
     console.log('password', form.value.password);

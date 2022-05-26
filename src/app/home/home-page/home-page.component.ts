@@ -23,7 +23,6 @@ export class HomePageComponent implements OnInit {
     this.dataService.getData(this.commonService.categoriesApi).subscribe((res) => {
       this.categories = res;
       this.categories = this.categories.filter((a: any) => {
-        console.log(a)
         return a.order > 0
       })
       this.sortProduct();

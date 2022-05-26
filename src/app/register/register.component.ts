@@ -51,7 +51,6 @@ export class RegisterComponent implements OnInit {
     }
   }
   onSubmit(form: FormGroup) {
-    debugger
     console.log('Valid?', form.valid); // true or false
     console.log('Name', form.value.name);
     console.log('Email', form.value.email);

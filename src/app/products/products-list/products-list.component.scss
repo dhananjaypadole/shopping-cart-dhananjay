@@ -1,0 +1,97 @@
+.product-listing {
+    .sidebar-filter, .main-content {
+        float: left;
+    } 
+    .main-content {
+        margin-top: 20px;
+    }
+    .product-item {
+        position: relative;
+        
+        .product-name {
+            font-weight: 500;
+            height: 60px;
+            padding-bottom: 15px;
+        }
+        .product-image {
+            padding-bottom: 10px;
+
+            img {
+                width: 100%;
+            }
+        }
+        .product-desc {
+            background-color: #ececec;
+            line-height: 1.2;
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+        .truncate {
+            width: 100%;
+            line-height: 1.2rem;
+            height: 124px;
+            /* white-space: nowrap; */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .product-options { 
+            padding-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;;
+            border-bottom: 2px dashed #eaeaea;
+            
+            .product-price {
+                letter-spacing: -1px;
+                font-size: 14px;
+            }
+            .buy-btn {
+                background-color: #b11245;
+                letter-spacing: -1px;
+                color: #fff;
+                padding: 3px 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    .border-line-right {
+        border-right: none;
+        margin-bottom: 30px;
+    }
+    .sidebar-filter {
+        width: 100%;
+        background-color: rgb(174,19,70);
+        height: auto;
+    }
+    .product-listing {
+        .main-content {
+            width: 100%;
+        }
+    }
+}
+@media (min-width: 600px) {
+    .border-line-right {
+        border-right: 2px solid #ececec;
+        margin-bottom: 30px;
+        &:nth-child(4n) {
+            border-right: none;
+        }
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+    .sidebar-filter {
+        width: 250px;
+        background-color: rgb(229,229,229);
+        height: 100vh;
+    }
+    .product-listing {
+        .main-content {
+            width: calc(100% - 250px);
+        }
+    }
+}
