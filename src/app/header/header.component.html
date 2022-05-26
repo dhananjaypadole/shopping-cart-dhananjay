@@ -1,5 +1,4 @@
-<div class="container-fluid height-90">
-    <!-- Updates - Heena -->
+<!-- <div class="container-fluid height-90">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -7,31 +6,60 @@
             </div>
             <div class="col-sm-9">
                 <div class="row">
-                    <div class="col-lg-12 login-singup">
-                        <a routerLink="/register" class="login-singup-a c-pointer">SignIn</a>
-                        <a routerLink="/login" style="margin-left: 2%" class="login-singup-a c-pointer">Register</a>
+                    <div class="col-sm-12 login-singup">
+                        <a routerLink="/login" class="login-singup-a c-pointer">SignIn</a>
+                        <a routerLink="/register" style="margin-left: 2%" class="login-singup-a c-pointer">Register</a>
                     </div>
                 </div>
                 <div class="row mt-3">
 
-                    <div class="col-lg-6 home-product">
+                    <div class="col-sm-6 home-product">
                         <span routerLink="/home" class="c-pointer">Home</span>
                         <span routerLink="/product-listing" class="c-pointer" style="margin-left: 10%">Products</span>
                     </div>
 
-                    <div class="col-lg-6">
-                        <div class="row cart-imag c-pointer" routerLink="/cart" data-bs-toggle="modal"
-                            data-bs-target="#myModal">
-                            <div class="col-lg-6">
+                    <div class="col-sm-6">
+                        <div class="cart-button">
+                            <div class="cart-icon">
                                 <img class="cart-logo" src="../../../assets/img/cart.svg">
                             </div>
-                            <div class="col-lg-6 p-0">
-                                <span class="cart-iteamcount  "> 0 item</span>
-                            </div>
+                            <span class="cart-count" > 0 items</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div> -->
+
+
+<!-- New changes - Heena -->
+<div class="container-fluid height-90">
+    <div class="container">
+        <nav class="navbar navbar-inverse relative">
+              <div class="navbar-header">
+                  <a routerLink="/home" class="c-pointer"> <img src="../../assets/img/logo.png"></a>
+              </div>
+              <div class="login-register">
+                <a routerLink="/login" class="login-register-button c-pointer">SignIn</a>
+                <a routerLink="/register" class="login-register-button c-pointer">Register</a>
+              </div>
+              <div class="navbar-items margin-top-custom">
+                  <span class="active"><a routerLink="/home" class="c-pointer">Home</a></span>
+                  <span><a routerLink="/product-listing" class="c-pointer" style="margin-left: 5%">Products</a></span>
+              </div>
+              <ul class="nav navbar-nav navbar-right margin-top-custom cart-button-layout">
+                <li class="cart-button">
+                    <div class="cart-icon">
+                        <img class="cart-logo" src="../../../assets/img/cart.svg">
+                    </div>
+                    <span class="cart-count" > 0 items</span>    
+                </li>
+              </ul>
+        </nav>
+    </div>
 </div>
+
+
+
+

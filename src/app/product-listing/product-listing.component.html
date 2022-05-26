@@ -1,111 +1,28 @@
 <div class="container-fluid">
-    <div class="container">
+    <div class="container-sm visible-xs">
         <div class="row product-listing">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-xs-12">
                 <div class="sidebar-filter">
                     <app-sidebar-filter></app-sidebar-filter>
                 </div>
                 <div class="main-content">
                     <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-3">
+                        <div class="row mt-2 mb-4">
+                            <div class="col-sm-3 col-xs-12 border-line-right" *ngFor="let product of products">
                                 <div class="product-item">
                                     <div class="product-name">
-                                        <span>Fresho Kiwi - Green, 3pcs</span>
+                                        <span>{{product.name}}</span>
                                     </div>
                                     <div class="product-image">
-                                        <img src="../../assets/img/fruit-n-veg/kiwi-green.jpg">
+                                        <!-- <img src="../../assets/static/images/products/fruit-n-veg/kiwi-green.jpg"> -->
+                                        <img class="w-100" src="{{assetsPath}}{{product.imageURL}}" alt="">
                                     </div>
-                                    <div class="product-desc">
-                                        <span>Kiwis are oval shaped with a brownish outer skin. This flesh is bring green and juicy with tiny, edible black seeds</span>
+                                    <div class="product-desc truncate">
+                                        <span>{{product.description}}</span>
                                     </div>
                                     <div class="product-options">
                                         <div class="product-price">
-                                            <span>MRP Rs. <span>87</span></span>
-                                        </div>
-                                        <div class="product-button">
-                                            <div class="product-btn buy-btn">Buy Now</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-item">
-                                    <div class="product-name">
-                                        <span>Fresho Kiwi - Green, 3pcs</span>
-                                    </div>
-                                    <div class="product-image">
-                                        <img src="../../assets/img/fruit-n-veg/kiwi-green.jpg">
-                                    </div>
-                                    <div class="product-desc">
-                                        <span>Kiwis are oval shaped with a brownish outer skin. This flesh is bring green and juicy with tiny, edible black seeds</span>
-                                    </div>
-                                    <div class="product-options">
-                                        <div class="product-price">
-                                            <span>MRP Rs. <span>87</span></span>
-                                        </div>
-                                        <div class="product-button">
-                                            <div class="product-btn buy-btn">Buy Now</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-item">
-                                    <div class="product-name">
-                                        <span>Fresho Kiwi - Green, 3pcs</span>
-                                    </div>
-                                    <div class="product-image">
-                                        <img src="../../assets/img/fruit-n-veg/kiwi-green.jpg">
-                                    </div>
-                                    <div class="product-desc">
-                                        <span>Kiwis are oval shaped with a brownish outer skin. This flesh is bring green and juicy with tiny, edible black seeds</span>
-                                    </div>
-                                    <div class="product-options">
-                                        <div class="product-price">
-                                            <span>MRP Rs. <span>87</span></span>
-                                        </div>
-                                        <div class="product-button">
-                                            <div class="product-btn buy-btn">Buy Now</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-item">
-                                    <div class="product-name">
-                                        <span>Fresho Kiwi - Green, 3pcs</span>
-                                    </div>
-                                    <div class="product-image">
-                                        <img src="../../assets/img/fruit-n-veg/kiwi-green.jpg">
-                                    </div>
-                                    <div class="product-desc">
-                                        <span>Kiwis are oval shaped with a brownish outer skin. This flesh is bring green and juicy with tiny, edible black seeds</span>
-                                    </div>
-                                    <div class="product-options">
-                                        <div class="product-price">
-                                            <span>MRP Rs. <span>87</span></span>
-                                        </div>
-                                        <div class="product-button">
-                                            <div class="product-btn buy-btn">Buy Now</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="product-item">
-                                    <div class="product-name">
-                                        <span>Fresho Kiwi - Green, 3pcs</span>
-                                    </div>
-                                    <div class="product-image">
-                                        <img src="../../assets/img/fruit-n-veg/kiwi-green.jpg">
-                                    </div>
-                                    <div class="product-desc">
-                                        <span>Kiwis are oval shaped with a brownish outer skin. This flesh is bring green and juicy with tiny, edible black seeds</span>
-                                    </div>
-                                    <div class="product-options">
-                                        <div class="product-price">
-                                            <span>MRP Rs. <span>87</span></span>
+                                            <span>MRP Rs. <span>{{product.price}}</span></span>
                                         </div>
                                         <div class="product-button">
                                             <div class="product-btn buy-btn">Buy Now</div>
