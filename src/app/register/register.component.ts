@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
+import { DataService } from '../services/data.service';
+// import { RegisterationData } from './registerationData';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -9,7 +11,14 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 export class RegisterComponent implements OnInit {
   RegistrationForm: any = FormGroup;
   passwordConfirmPass: any = [];
-  constructor(private fb: FormBuilder) { }
+  registrationData = {
+    'fname': '',
+    'lname': '',
+    'email': '',
+    'password': '',
+    'conpassword': ''
+  }
+  constructor(private fb: FormBuilder, private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.RegistrationForm = this.fb.group({
@@ -51,11 +60,22 @@ export class RegisterComponent implements OnInit {
     }
   }
   onSubmit(form: FormGroup) {
-    debugger
+    console.log(form.controls)
+    //  debugger
     console.log('Valid?', form.valid); // true or false
-    console.log('Name', form.value.name);
-    console.log('Email', form.value.email);
-    console.log('password', form.value.password);
+    this.registrationData.fname = form.value.fname;
+    this.registrationData.lname = form.value.lname;
+    this.registrationData.email = form.value.email;
+    this.registrationData.password = form.value.password;
+    this.registrationData.conpassword = form.value.conpassword;
+
+
+    this.dataService.postData(this.registrationData).subscribe(res => {
+      console.log(res);
+      if (res != "") {
+        this.router.navigate(['/login']);
+      }
+    })
   }
 
 }

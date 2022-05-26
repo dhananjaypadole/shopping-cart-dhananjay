@@ -30,7 +30,8 @@
             Email</label><br>
           <input type="email" formControlName="email" required="email"><br>
           <span class="errorMessage"
-            *ngIf="!RegistrationForm.get('email').valid && RegistrationForm.get('email').touched ">Please enter Email</span>
+            *ngIf="!RegistrationForm.get('email').valid && RegistrationForm.get('email').touched ">Please enter
+            Email</span>
 
         </div>
         <div>
@@ -54,7 +55,8 @@
 
         </div>
         <div class="sub-btn">
-          <button type="submit" class="mb-5">SignUp</button>
+          <button type="submit" [disabled]="!RegistrationForm.valid"
+            [ngClass]="RegistrationForm.valid ? 'btn-enable' : 'btn-disable'" class="mb-5">SignUp</button>
         </div>
 
       </form>
