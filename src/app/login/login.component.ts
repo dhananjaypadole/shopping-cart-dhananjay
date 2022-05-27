@@ -39,15 +39,12 @@ export class LoginComponent implements OnInit {
   }
 
   getData() {
-    debugger;
     this.dataService.getData(this.commonService.userApi).subscribe((res: any) => {
-      debugger
       this.userArray = res;
     });
   }
 
   isUserExist(obj: any, username: string, password: string) {
-    debugger
     for (let key in obj) {
       if (obj[key].email === username && obj[key].password === password) {
         return true;
@@ -59,11 +56,9 @@ export class LoginComponent implements OnInit {
   onSubmit(form: FormGroup) {
     let email = form.value.email;
     let password = form.value.password;
-    debugger;
 
     let exists = this.isUserExist(this.userArray, email, password);
     if (exists) {
-      debugger;
       this.router.navigate(['/home']);
     } else {
       this.wrongCredintialsMessage = true
