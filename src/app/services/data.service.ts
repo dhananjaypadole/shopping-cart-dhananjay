@@ -6,6 +6,7 @@ import { CommonService } from './common.service';
   providedIn: 'root'
 })
 export class DataService {
+  allcetegory: any = [];
 
   constructor(private http: HttpClient) { }
 

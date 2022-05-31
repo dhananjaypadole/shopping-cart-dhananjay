@@ -1,9 +1,9 @@
 <div class="bg-white mt-3">
     <div class="card-body">
-        <div class="row">
+        <div class="row" *ngIf="item">
             <div class="col-sm-12 card-product">
                 <div class="cart-item-img">
-                    <img style="width: 75px;" src="{{assetsPath}}{{item.imageURL}}" alt="">
+                    <img style="width: 75px;" src="{{assetsPath}}{{item.imageURL}}" alt="" >
                 </div>
                 <div class="product-description w-100">
                     <div class="heading">

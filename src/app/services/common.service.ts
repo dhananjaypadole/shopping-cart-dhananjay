@@ -61,6 +61,8 @@ export class CommonService {
     let totalprice = this.cartItems.reduce((ele: any, cur: any) => {
       return ele + (cur.count * cur.price)
     }, 0)
+
+    localStorage.setItem('cartItem', JSON.stringify(this.cartItems))
     this.totelItemSiseInCartPrice(totalprice);
   }
 
