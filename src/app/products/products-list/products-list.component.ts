@@ -27,13 +27,10 @@ export class ProductsListComponent implements OnInit {
     });
   }
 
-  filterCatList(){
+  filterCatList() {
     const key = 'category';
-
-const arrayUniqueByKey = [...new Map(this.products.map((item: { [x: string]: any; }) =>
-  [item[key], item])).values()];
-
-console.log(arrayUniqueByKey);
+    const arrayUniqueByKey = [...new Map(this.products.map((item: { [x: string]: any; }) =>
+      [item[key], item])).values()];
   }
 
   showSuccess(product: any) {

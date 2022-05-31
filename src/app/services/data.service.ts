@@ -17,9 +17,7 @@ export class DataService {
   postData(obj: any) {
     const headers = { 'content-type': 'application/json' }
     const body = obj;
-    console.log(body)
     return this.http.post<any>('http://localhost:6005/users', body)
-
   }
 
 }

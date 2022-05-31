@@ -34,6 +34,9 @@ cartItem = [];
     this.totalprice = this.cartItem.reduce((ele: any, cur: any) => {
       return ele + (cur.count * cur.price)
     }, 0)
+    this.totalCartItem = this.cartItem.reduce((ele: any, cur: any) => {
+      return ele + cur.count
+    }, 0)
     }
     this.commonService.modelopen.subscribe((res) => {
       this.openScrollableContent(this.longContent)

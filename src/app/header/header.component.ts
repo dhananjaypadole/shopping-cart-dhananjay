@@ -20,22 +20,15 @@ export class HeaderComponent implements OnInit {
     })
 
     let cartItem = localStorage.getItem('cartItem')
-    console.log(cartItem);
     if (cartItem) {
       this.commonService.cartItems = JSON.parse(cartItem);
       this.commonService.updateTotelitemInCart();
       this.commonService.updateTotalPrice();
-      
+
     }
   }
   open() {
     this.commonService.openModel();
-    // const modalRef = this.modalService.open(CartListComponent);
-    // modalRef.componentInstance.name = 'World';
-
-
-
-    // this.modalService.open("longContent", { scrollable: true });
   }
 
 }
