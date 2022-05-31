@@ -72,7 +72,6 @@ export class RegisterComponent implements OnInit {
     this.dataService.postData(this.registrationData).subscribe(res => {
       console.log(res);
       if (res != "") {
-        debugger
         this.router.navigate(['auth/login']);
       }
     })

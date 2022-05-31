@@ -1,7 +1,3 @@
 <ul>
-    <li>Fruits and Vegetables</li>
-    <li>Bakery Cakes and Dairy</li>
-    <li>Bevrages</li>
-    <li>Beauty and Hygine</li>
-    <li>Baby Care</li>
+    <li *ngFor="let item of categories" class="c-pointer">{{item.name}}</li>
 </ul>

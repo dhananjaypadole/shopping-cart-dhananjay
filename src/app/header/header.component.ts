@@ -18,6 +18,15 @@ export class HeaderComponent implements OnInit {
     this.commonService.totelItemSiseInCart.subscribe((res: any) => {
       this.totalCartItem = res;
     })
+
+    let cartItem = localStorage.getItem('cartItem')
+    console.log(cartItem);
+    if (cartItem) {
+      this.commonService.cartItems = JSON.parse(cartItem);
+      this.commonService.updateTotelitemInCart();
+      this.commonService.updateTotalPrice();
+      
+    }
   }
   open() {
     this.commonService.openModel();

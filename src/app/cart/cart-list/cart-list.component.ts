@@ -29,6 +29,12 @@ cartItem = [];
   constructor(private modalService: NgbModal, private commonService: CommonService) { }
 
   ngOnInit(): void {
+    if (this.cartItem.length == 0) {
+    this.cartItem = this.commonService.cartItems;
+    this.totalprice = this.cartItem.reduce((ele: any, cur: any) => {
+      return ele + (cur.count * cur.price)
+    }, 0)
+    }
     this.commonService.modelopen.subscribe((res) => {
       this.openScrollableContent(this.longContent)
     })
