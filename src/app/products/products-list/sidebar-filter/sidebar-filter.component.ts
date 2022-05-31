@@ -27,7 +27,6 @@ export class SidebarFilterComponent implements OnInit {
   getData() {
     this.dataService.getData(this.commonService.categoriesApi).subscribe((res) => {
       this.categories = res;
-      console.log( this.categories)
       this.categories = this.categories.filter((a: any) => {
         return a.order > 0
       })
